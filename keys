@@ -1,6 +1,30 @@
 
 #My key commands:
 
+#Max window:
+Control Alt 65 :MaximizeWindow
+
+#Reconfigure
+156 :Reconfigure
+
+#volume:
+#up:
+122 :ExecCommand aprofile_ctl.sh -m set_volume 5%+
+#down
+123 :ExecCommand aprofile_ctl.sh -m set_volume 5%-
+#mute
+121 :ExecCommand amixer -a sset Master,0 toggle 2&>1 > /dev/null
+
+#reposition window left half (shift + ctrl + direction):
+#left
+Shift Control 113 :MoveTo 0 * Left
+#right
+Shift Control 114 :Moveto 0 * Right
+#up
+Shift Control 111 :Moveto * 0 Upper
+#down
+Shift Control 116 :Moveto * 0 Lower
+
 #Open terminal
 Control Mod1 28 :exec xterm
 
